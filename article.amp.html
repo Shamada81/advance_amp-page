@@ -92,6 +92,12 @@
       custom-element="amp-ad"
       src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
     ></script>
+    <script
+      async
+      custom-element="amp-youtube"
+      src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"
+    ></script>
+
   </head>
   <body>
     <header>
@@ -116,23 +122,34 @@
 <!--    >-->
 <!--    </amp-ad>-->
 
-    <amp-ad
-      width="300"
-      height="250"
-      type="doubleclick"
-      data-slot="/35096353/amptesting/geo/uk"
-    >
-      <div fallback>No ad appeared because you're not browsing from the UK!</div>
-    </amp-ad>
+<!--    <amp-ad-->
+<!--      width="300"-->
+<!--      height="250"-->
+<!--      type="doubleclick"-->
+<!--      data-slot="/35096353/amptesting/geo/uk"-->
+<!--    >-->
+<!--      <div fallback>No ad appeared because you're not browsing from the UK!</div>-->
+<!--    </amp-ad>-->
 
-    <amp-ad
-      width="300"
-      height="250"
-      type="doubleclick"
-      data-slot="/35096353/amptesting/geo/us"
+<!--    <amp-ad-->
+<!--      width="300"-->
+<!--      height="250"-->
+<!--      type="doubleclick"-->
+<!--      data-slot="/35096353/amptesting/geo/us"-->
+<!--    >-->
+<!--      <div fallback>No ad appeared because you're not browsing from the US!</div>-->
+<!--    </amp-ad>-->
+
+    <amp-youtube
+      data-videoid="npum8JsITQE"
+      layout="responsive"
+      width="480"
+      height="270"
     >
-      <div fallback>No ad appeared because you're not browsing from the US!</div>
-    </amp-ad>
+      <div fallback>
+        <p>The video could not be loaded.</p>
+      </div>
+    </amp-youtube>
 
     <article>
       <h1>Article Name</h1>
