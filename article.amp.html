@@ -51,6 +51,9 @@
         padding: 0.5em;
         margin: 0.5em;
       }
+      amp-fit-text {
+        white-space: normal;
+      }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script type="application/ld+json">
@@ -106,6 +109,11 @@
       async
       custom-element="amp-fit-text"
       src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-carousel"
+      src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"
     ></script>
   </head>
   <body>
@@ -165,29 +173,135 @@
 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas tortor sapien, non tristique ligula accumsan eu.</p>
 
-      <amp-img
-        src="mountains.jpg"
-        layout="responsive"
-        width="266"
-        height="150"
-      ></amp-img>
+<!--      <amp-img-->
+<!--        src="mountains.jpg"-->
+<!--        layout="responsive"-->
+<!--        width="266"-->
+<!--        height="150"-->
+<!--      ></amp-img>-->
 
-      <amp-twitter
-        width="486"
-        height="657"
-        layout="responsive"
-        data-tweetid="638793490521001985"
-      ></amp-twitter>
+<!--      <amp-twitter-->
+<!--        width="486"-->
+<!--        height="657"-->
+<!--        layout="responsive"-->
+<!--        data-tweetid="638793490521001985"-->
+<!--      ></amp-twitter>-->
 
-      <amp-fit-text
-        width="400"
-        height="400"
-        layout="responsive"
-        max-font-size="42"
+<!--      <amp-fit-text-->
+<!--        width="400"-->
+<!--        height="400"-->
+<!--        layout="responsive"-->
+<!--        max-font-size="42"-->
+<!--      >-->
+<!--        Hello-->
+<!--      </amp-fit-text>-->
+
+<!--      <amp-carousel-->
+<!--        layout="responsive"-->
+<!--        width="300"-->
+<!--        height="168"-->
+<!--        type="slides"-->
+<!--        loop-->
+<!--      >-->
+<!--        <amp-img layout="responsive" src="mountains-1.jpg" width="300" height="168"></amp-img>-->
+<!--        <amp-img layout="responsive" src="mountains-2.jpg" width="300" height="168"></amp-img>-->
+<!--        <amp-img layout="responsive" src="mountains-3.jpg" width="300" height="168"></amp-img>-->
+<!--      </amp-carousel>-->
+
+
+<!--      <amp-carousel-->
+<!--        layout="responsive"-->
+<!--        width="300"-->
+<!--        height="168"-->
+<!--        type="slides"-->
+<!--        loop-->
+<!--        autoplay-->
+<!--        delay="2000"-->
+<!--      >-->
+<!--        <amp-img-->
+<!--          layout="responsive"-->
+<!--          src="mountains-1.jpg"-->
+<!--          width="300"-->
+<!--          height="168"-->
+<!--        ></amp-img>-->
+<!--        <amp-img-->
+<!--                layout="responsive"-->
+<!--                src="mountains-2.jpg"-->
+<!--                width="300"-->
+<!--                height="168"-->
+<!--        ></amp-img>-->
+<!--        <amp-img-->
+<!--                layout="responsive"-->
+<!--                src="mountains-3.jpg"-->
+<!--                width="300"-->
+<!--                height="168"-->
+<!--        ></amp-img>-->
+<!--      </amp-carousel>-->
+<!--      <amp-carousel-->
+<!--        layout="fixed-height"-->
+<!--        height="250"-->
+<!--        type="carousel"-->
+<!--      >-->
+
+<!--        <amp-img-->
+<!--          src="blocky-mountains-1.jpg"-->
+<!--          width="300"-->
+<!--          height="250"-->
+<!--        ></amp-img>-->
+
+<!--        <amp-ad-->
+<!--          width="300"-->
+<!--          height="250"-->
+<!--          type="doubleclick"-->
+<!--          data-slot="/35096353/amptesting/image/static"-->
+<!--        >-->
+<!--          <div placeholder> This d is still loading.</div>-->
+<!--        </amp-ad>-->
+
+<!--        <amp-fit-text-->
+<!--          width="300"-->
+<!--          height="250"-->
+<!--          layout="fixed"-->
+<!--        >-->
+<!--          Big, bold article quotes goes here.-->
+<!--        </amp-fit-text>-->
+<!--      </amp-carousel>-->
+
+      <amp-carousel
+              layout="responsive"
+              width="300"
+              height="250"
+              type="slides"
+              autoplay
+              loop
+              dealy="2000"
       >
-        Hello
-      </amp-fit-text>
 
+        <amp-img
+                src="blocky-mountains-1.jpg"
+                width="300"
+                height="250"
+                layout="responsive"
+        ></amp-img>
+
+        <amp-ad
+                width="300"
+                height="250"
+                type="doubleclick"
+                data-slot="/35096353/amptesting/image/static"
+                layout="responsive"
+        >
+          <div placeholder> This d is still loading.</div>
+        </amp-ad>
+
+        <amp-fit-text
+                width="300"
+                height="250"
+                layout="responsive"
+        >
+          Big, bold article quotes goes here.
+        </amp-fit-text>
+      </amp-carousel>
     </article>
   </body>
 </html>
