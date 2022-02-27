@@ -72,6 +72,23 @@
       article {
         margin-top: 50px;
       }
+      .hamburger {
+        padding-left: 10px;
+      }
+      .sidebar {
+        padding: 10px;
+        margin: 0;
+      }
+      .sidebar > li {
+        list-style: none;
+        margin-bottom: 10px;
+      }
+      .sidebar a {
+        text-decoration: none;
+      }
+      .close-sidebar {
+        font-size: 1.5em;
+        pad
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script type="application/ld+json">
@@ -138,19 +155,51 @@
       custom-element="amp-analytics"
       src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
     ></script>
+    <script
+      async
+      custom-element="amp-sidebar"
+      src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"
+    ></script>
   </head>
   <body>
+<!--  Ссылка на домашнюю страницу-->
+<!--    <header class="headerbar">-->
+<!--      <a href="homepage.html">-->
+<!--        <amp-img-->
+<!--          class="home-button"-->
+<!--          src="icons/home.png"-->
+<!--          width="36"-->
+<!--          height="36"-->
+<!--        ></amp-img>-->
+<!--      </a>-->
+<!--      <div class="site-name">News Site</div>-->
+<!--    </header>-->
+
+
+<!-- Реализация гамбургера-->
     <header class="headerbar">
-      <a href="homepage.html">
-        <amp-img
-          class="home-button"
-          src="icons/home.png"
-          width="36"
-          height="36"
-        ></amp-img>
-      </a>
+      <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="humburger">
+        ☰
+      </div>
       <div class="site-name">News Site</div>
     </header>
+
+    <amp-sidebar id="sidebar1" layout="nodisplay" side="left">
+      <div
+        role="button"
+        arial-label="close sidebar"
+        on="tap:sidebar1.toggle"
+        tableindex="0"
+        class="close-sidebar"
+      >
+        ✕
+      </div>
+      <ul class="sidebar">
+        <li><a href="#">Example 1</a></li>
+        <li><a href="#">Example 2</a></li>
+        <li><a href="#">Example 3</a></li>
+      </ul>
+    </amp-sidebar>
 
 <!--    <amp-ad-->
 <!--      width="300"-->
