@@ -54,6 +54,24 @@
       amp-fit-text {
         white-space: normal;
       }
+      .home-button {
+        margin-top: 8px;
+      }
+      .headerbar {
+        height: 50px;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+      .site-name {
+        margin: auto;
+      }
+      article {
+        margin-top: 50px;
+      }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script type="application/ld+json">
@@ -122,8 +140,16 @@
     ></script>
   </head>
   <body>
-    <header>
-      News Site
+    <header class="headerbar">
+      <a href="homepage.html">
+        <amp-img
+          class="home-button"
+          src="icons/home.png"
+          width="36"
+          height="36"
+        ></amp-img>
+      </a>
+      <div class="site-name">News Site</div>
     </header>
 
 <!--    <amp-ad-->
