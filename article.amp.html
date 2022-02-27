@@ -115,6 +115,11 @@
       custom-element="amp-carousel"
       src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"
     ></script>
+    <script
+      async
+      custom-element="amp-analytics"
+      src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    ></script>
   </head>
   <body>
     <header>
@@ -302,6 +307,34 @@
           Big, bold article quotes goes here.
         </amp-fit-text>
       </amp-carousel>
+
+      <amp-analytics type="googleanalytics">
+        <script type="application/json">
+          {
+            "vars": {
+              "account": "UA-YYYY-Y"
+            },
+            "triggers": {
+              "default pageview": {
+                "on": "visible",
+                "request": "pageview",
+                "vars": {
+                "title": "Name of the Article"
+                }
+              }
+            },
+            "click on #header trigger": {
+              "on": "click",
+              "selector": "#header",
+              "request": "event",
+              "vars": {
+                "eventCategory": "examples",
+                "eventAction": "clicked-header"
+              }
+            }
+          }
+        </script>
+      </amp-analytics>
     </article>
   </body>
 </html>
